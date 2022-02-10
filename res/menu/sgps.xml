@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item
+        android:id="@+id/btn_assert_text"
+        android:orderInCategory="0"
+        android:title="@string/btn_assert_text"/>
+    <item
+        android:id="@+id/btn_start_batching"
+        android:orderInCategory="1"
+        android:title="Start batching"/>
+    <item
+        android:id="@+id/btn_stop_batching"
+        android:orderInCategory="2"
+        android:title="Stop batching"/>
+</menu>

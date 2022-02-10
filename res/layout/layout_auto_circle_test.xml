@@ -1,0 +1,596 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout_auto_circle_test"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            style="@style/style_table_left"
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="8"
+            android:singleLine="true"
+            android:text="@string/gps_test_times" />
+
+        <com.spreadtrum.sgps.NumberPickerView
+            android:id="@+id/et_gps_test_times"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:buttonWidth="40dp"
+            app:editextWidth="80dp"
+            app:editable="true"
+            app:individer="@drawable/divider_horizontal"
+            app:textColor="@android:color/black"
+            app:textSize="14sp" />
+    </LinearLayout>
+
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="3dip"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/style_table_left"
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="8"
+            android:singleLine="true"
+            android:text="@string/gps_ttff_timeout" />
+
+        <com.spreadtrum.sgps.NumberPickerView
+            android:id="@+id/gps_ttff_timeout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:buttonWidth="40dp"
+            app:editextWidth="80dp"
+            app:editable="true"
+            app:individer="@drawable/divider_horizontal"
+            app:textColor="@android:color/black"
+            app:textSize="14sp" />
+    </LinearLayout>
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="3dip"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/style_table_left"
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="8"
+            android:singleLine="true"
+            android:text="@string/gps_ttff_interval" />
+
+        <com.spreadtrum.sgps.NumberPickerView
+            android:id="@+id/gps_ttff_interval"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:buttonWidth="40dp"
+            app:editextWidth="80dp"
+            app:editable="true"
+            app:individer="@drawable/divider_horizontal"
+            app:textColor="@android:color/black"
+            app:textSize="14sp" />
+
+    </LinearLayout>
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="3dip"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/style_table_left"
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="8"
+            android:singleLine="true"
+            android:text="@string/gps_mode_interval" />
+
+        <com.spreadtrum.sgps.NumberPickerView
+            android:id="@+id/gps_mode_interval"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:buttonWidth="40dp"
+            app:editextWidth="80dp"
+            app:editable="true"
+            app:individer="@drawable/divider_horizontal"
+            app:textColor="@android:color/black"
+            app:textSize="14sp" />
+
+    </LinearLayout>
+
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <CheckBox
+            android:id="@+id/check_auto_hot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/hot" />
+
+        <CheckBox
+            android:id="@+id/check_auto_warm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/warm" />
+
+        <CheckBox
+            android:id="@+id/check_auto_cold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/cold" />
+
+        <CheckBox
+            android:id="@+id/check_auto_full"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/full" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_gps_test_start"
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/gps_test_start" />
+
+        <Button
+            android:id="@+id/btn_gps_test_stop"
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/gps_test_stop" />
+    </LinearLayout>
+
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:stretchColumns="1">
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="@color/gray" />
+
+            <TableRow>
+
+                <TextView
+                    style="@style/style_table_left"
+                    android:layout_width="0px"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:text="@string/gps_test_current_times" />
+
+                <TextView
+                    android:id="@+id/tv_current_times_Hot"
+                    android:layout_width="0px"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:textStyle="bold" />
+            </TableRow>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="@color/light_white" />
+
+            <TableRow>
+
+                <TextView
+                    style="@style/style_table_left"
+                    android:layout_width="0px"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:text="@string/last_ttff" />
+
+                <TextView
+                    android:id="@+id/tv_last_ttff_Hot"
+                    android:layout_width="0px"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:textStyle="bold" />
+            </TableRow>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="@color/light_white" />
+
+            <TableRow>
+
+                <TextView
+                    style="@style/style_table_left"
+                    android:layout_width="0px"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:text="@string/gps_test_mean_ttff" />
+
+                <TextView
+                    android:id="@+id/tv_mean_ttff_Hot"
+                    android:layout_width="0px"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1" />
+            </TableRow>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="@color/light_white" />
+
+            <TableRow>
+
+                <TextView
+                    style="@style/style_table_left"
+                    android:layout_width="0px"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:text="@string/restart_mode" />
+
+                <TextView
+                    android:layout_width="0px"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:text="@string/hot" />
+            </TableRow>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="@color/light_white" />
+
+            <TableRow>
+
+                <TextView
+                    style="@style/style_table_left"
+                    android:id="@+id/success_rate_hot"
+                    android:layout_width="0px"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1" />
+            </TableRow>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="@color/gray" />
+
+            <TableRow>
+
+                <TextView
+                    style="@style/style_table_left"
+                    android:layout_width="0px"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:text="@string/gps_test_current_times" />
+
+                <TextView
+                    android:id="@+id/tv_current_times_Warm"
+                    android:layout_width="0px"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:textStyle="bold" />
+            </TableRow>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="@color/light_white" />
+
+            <TableRow>
+
+                <TextView
+                    style="@style/style_table_left"
+                    android:layout_width="0px"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:text="@string/last_ttff" />
+
+                <TextView
+                    android:id="@+id/tv_last_ttff_Warm"
+                    android:layout_width="0px"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:textStyle="bold" />
+            </TableRow>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="@color/light_white" />
+
+            <TableRow>
+
+                <TextView
+                    style="@style/style_table_left"
+                    android:layout_width="0px"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:text="@string/gps_test_mean_ttff" />
+
+                <TextView
+                    android:id="@+id/tv_mean_ttff_Warm"
+                    android:layout_width="0px"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1" />
+            </TableRow>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="@color/light_white" />
+
+            <TableRow>
+
+                <TextView
+                    style="@style/style_table_left"
+                    android:layout_width="0px"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:text="@string/restart_mode" />
+
+                <TextView
+                    android:layout_width="0px"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:text="@string/warm" />
+            </TableRow>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="@color/light_white" />
+
+            <TableRow>
+
+                <TextView
+                    style="@style/style_table_left"
+                    android:id="@+id/success_rate_warm"
+                    android:layout_width="0px"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1" />
+            </TableRow>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="@color/gray" />
+
+            <TableRow>
+
+                <TextView
+                    style="@style/style_table_left"
+                    android:layout_width="0px"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:text="@string/gps_test_current_times" />
+
+                <TextView
+                    android:id="@+id/tv_current_times_Cold"
+                    android:layout_width="0px"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:textStyle="bold" />
+            </TableRow>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="@color/light_white" />
+
+            <TableRow>
+
+                <TextView
+                    style="@style/style_table_left"
+                    android:layout_width="0px"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:text="@string/last_ttff" />
+
+                <TextView
+                    android:id="@+id/tv_last_ttff_Cold"
+                    android:layout_width="0px"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:textStyle="bold" />
+            </TableRow>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="@color/light_white" />
+
+            <TableRow>
+
+                <TextView
+                    style="@style/style_table_left"
+                    android:layout_width="0px"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:text="@string/gps_test_mean_ttff" />
+
+                <TextView
+                    android:id="@+id/tv_mean_ttff_Cold"
+                    android:layout_width="0px"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1" />
+            </TableRow>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="@color/light_white" />
+
+            <TableRow>
+
+                <TextView
+                    style="@style/style_table_left"
+                    android:layout_width="0px"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:text="@string/restart_mode" />
+
+                <TextView
+                    android:layout_width="0px"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:text="@string/cold" />
+            </TableRow>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="@color/light_white" />
+
+            <TableRow>
+
+                <TextView
+                    style="@style/style_table_left"
+                    android:id="@+id/success_rate_cold"
+                    android:layout_width="0px"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1" />
+            </TableRow>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="@color/gray" />
+
+            <TableRow>
+
+                <TextView
+                    style="@style/style_table_left"
+                    android:layout_width="0px"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:text="@string/gps_test_current_times" />
+
+                <TextView
+                    android:id="@+id/tv_current_times_Factory"
+                    android:layout_width="0px"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:textStyle="bold" />
+            </TableRow>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="@color/light_white" />
+
+            <TableRow>
+
+                <TextView
+                    style="@style/style_table_left"
+                    android:layout_width="0px"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:text="@string/last_ttff" />
+
+                <TextView
+                    android:id="@+id/tv_last_ttff_Factory"
+                    android:layout_width="0px"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:textStyle="bold" />
+            </TableRow>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="@color/light_white" />
+
+            <TableRow>
+
+                <TextView
+                    style="@style/style_table_left"
+                    android:layout_width="0px"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:text="@string/gps_test_mean_ttff" />
+
+                <TextView
+                    android:id="@+id/tv_mean_ttff_Factory"
+                    android:layout_width="0px"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1" />
+            </TableRow>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="@color/light_white" />
+
+
+            <TableRow>
+
+                <TextView
+                    style="@style/style_table_left"
+                    android:layout_width="0px"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:text="@string/restart_mode" />
+
+                <TextView
+                    android:layout_width="0px"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:text="@string/full" />
+            </TableRow>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="@color/light_white" />
+
+            <TableRow>
+
+                <TextView
+                    style="@style/style_table_left"
+                    android:id="@+id/success_rate_full"
+                    android:layout_width="0px"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1" />
+            </TableRow>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="@color/gray" />
+
+        </TableLayout>
+    </ScrollView>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dip"
+        android:background="@color/gray" />
+
+</LinearLayout>

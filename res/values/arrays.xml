@@ -1,0 +1,80 @@
+<resources>
+    <string-array name="true_position_list">
+        <item>User Define</item>
+        <item>Spreadtrum 1F canyon</item>
+        <item>Spreadtrum 10F opensky</item>
+        <item>ZX20F</item>
+        <item>Test Team 6700</item>
+        <item>Itest 6700</item>
+    </string-array>
+
+    <string-array name="true_position_Latitude_values">
+        <item> </item>
+        <item>31.21259167</item>
+        <item>31.212882</item>
+        <item>31.212897030</item>
+        <item>37.55</item>
+        <item>37.33</item>
+    </string-array>
+
+    <string-array name="true_position_Longitude_values">
+        <item> </item>
+        <item>121.6224217</item>
+        <item>121.622175</item>
+        <item>121.62441235</item>
+        <item>126.98333333</item>
+        <item>126.59</item>
+    </string-array>
+    <string-array name="slp_array">
+        <item>www.spirent-lcs.com:7275:Lab Spirent</item>
+        <item>slp.rs.de:7275:Lab Rns</item>
+        <item>218.206.176.50:7275:Lab Cmcc</item>
+        <item>slp1acva.andrew.com:7275:Lab Andrew</item>
+        <item>172.22.1.100:7275:Lab Ericsson</item>
+        <item>mvtvltegmpc.naladmz.ericsson.ca:7275:Lab Ericsson FQDN</item>
+        <item>supl.monternet.com:7275:CMCC</item>
+        <item>agps.supl.telstra.com:7275:Telstra</item>
+    </string-array>
+    <string-array name="posmethod_array">
+        <item>Set Assist</item>
+        <item>Set Base</item>
+        <item>Set Assist Pref</item>
+        <item>Set Base Pref</item>
+        <item>Auto</item>
+        <item>Ecid</item>
+        <item>No Position</item>
+        <item>Session info</item>
+    </string-array>
+    <string-array name="posmethod_array_values">
+        <item>ASSIST</item>
+        <item>BASE</item>
+        <item>ASSIST PREF</item>
+        <item>BASE PREF</item>
+        <item>AUTO</item>
+        <item>ECID</item>
+        <item>NO POSITION</item>
+        <item>SESSION INFO</item>
+    </string-array>
+    <string-array name="area_type_array">
+        <item>Entering Area</item>
+        <item>Inside Area</item>
+        <item>Outside Area</item>
+        <item>Leaving Area</item>
+    </string-array>
+    <string-array name="area_type_array_values">
+        <item>ENTERING</item>
+        <item>INSIDE</item>
+        <item>OUTSIDE</item>
+        <item>LEAVING</item>
+    </string-array>
+    <string-array name="ni_dialog_test_array">
+        <item>NOTIFY-Notification Only</item>
+        <item>NOTIFY-Allow no answer</item>
+        <item>NOTIFY-Deny no answer</item>
+    </string-array>
+    <string-array name="ni_dialog_test_array_values">
+        <item>NOTIFIONLY</item>
+        <item>ALLOW</item>
+        <item>DENY</item>
+    </string-array>
+</resources>

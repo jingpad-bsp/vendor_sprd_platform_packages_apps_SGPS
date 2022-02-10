@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:orientation="vertical" >
+
+         <TabHost
+             android:id="@android:id/tabhost"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent" >
+
+             <LinearLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent"
+                 android:orientation="vertical" >
+
+                 <HorizontalScrollView
+                     android:layout_width="fill_parent"
+                     android:layout_height="wrap_content"
+                     android:fillViewport="true"
+                     android:scrollbars="none" >
+
+                     <TabWidget
+                         android:id="@android:id/tabs"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content" >
+                     </TabWidget>
+                 </HorizontalScrollView>
+                 <View android:layout_width="match_parent"
+                     android:layout_height="1dip"
+                     android:background="@color/gray" />
+                 <FrameLayout
+                     android:id="@android:id/tabcontent"
+                     android:layout_width="match_parent"
+                     android:layout_height="match_parent" >
+
+                     <include
+                         android:layout_width="match_parent"
+                         android:layout_height="match_parent"
+                         layout="@layout/layout_agps" />
+
+                     <include
+                         android:layout_width="match_parent"
+                         android:layout_height="match_parent"
+                         layout="@layout/layout_satellites" />
+
+                     <include
+                         android:layout_width="match_parent"
+                         android:layout_height="match_parent"
+                         layout="@layout/layout_info" />
+
+                     <include
+                         android:layout_width="match_parent"
+                         android:layout_height="match_parent"
+                         layout="@layout/layout_nmea" />
+
+                     <include
+                         android:layout_width="match_parent"
+                         android:layout_height="match_parent"
+                         layout="@layout/layout_auto_circle_test" />
+
+                     <include
+                         android:layout_width="match_parent"
+                         android:layout_height="match_parent"
+                         layout="@layout/layout_auto_test" />
+                     <include
+                         android:layout_width="match_parent"
+                         android:layout_height="match_parent"
+                         layout="@layout/layout_noise_scan" />
+                 </FrameLayout>
+             </LinearLayout>
+         </TabHost>
+
+     </LinearLayout>

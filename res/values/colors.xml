@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="light_white">#00000000</color>
+    <color name="gray">#FF909090</color>
+    <color name="sigview_line_color">#FFDDDDDD</color>
+    <color name="bar_used">#FF00BB00</color>
+	<color name="bar_unused">#FFFFCC33</color>
+	<color name="bar_outline">#FFFFFFFF</color>
+	<color name="sigview_background">#FF222222</color>
+	<color name="grid">#FFDDDDDD</color>
+	<color name="skyview_background">#FF4444DD</color>
+	<color name="sigview_text_color">#FFFFFFFF</color>
+	<color name="skyview_text_color">#FFFFFFFF</color>
+
+	<color name="color1">#FFFFFF</color>
+	<color name="color2">#666666</color>
+	<color name="color4">#F6F6F6</color>
+	<color name="color13">#F9974E</color>
+	<color name="color14">#59B29C</color>
+	<color name="color25">#ED5564</color>
+
+	<color name="divider">#999</color>
+</resources>

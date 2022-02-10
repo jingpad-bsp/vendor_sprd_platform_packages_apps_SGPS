@@ -1,0 +1,168 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/layout_noise_scan"
+    android:background="@color/color4"
+    android:orientation="vertical">
+
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="14"
+            android:layout_marginStart="3dp"
+            android:ellipsize="marquee"
+            android:singleLine="true"
+            android:text="@string/NoiseScan_Repeattimes" />
+
+        <com.spreadtrum.sgps.NumberPickerView
+            android:id="@+id/spn_Repeattimes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:buttonWidth="40dp"
+            app:editextWidth="80dp"
+            app:editable="false"
+            app:individer="@drawable/divider_horizontal"
+            app:textColor="@android:color/black"
+            app:textSize="14sp" />
+
+    </LinearLayout>
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="3dip"
+        android:orientation="horizontal">
+        <TextView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:layout_marginStart="3dp"
+            android:ellipsize="marquee"
+            android:singleLine="true"
+            android:text="@string/NoiseScan_PeriodPertestcase" />
+        <com.spreadtrum.sgps.NumberPickerView
+            android:id="@+id/et_PeriodPertestcase"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:buttonWidth="40dp"
+            app:editextWidth="80dp"
+            app:editable="true"
+            app:individer="@drawable/divider_horizontal"
+            app:textColor="@android:color/black"
+            app:textSize="14sp" />
+    </LinearLayout>
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <View android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:background="@color/gray" />
+        <LinearLayout android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <Button android:id="@+id/noise_btn_start"
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Start" />
+            <Button android:id="@+id/noise_btn_stop"
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Stop" />
+        </LinearLayout>
+        <View android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:background="@color/gray" />
+    </LinearLayout>
+    <!-- 曲线图 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color1"
+        android:orientation="vertical"
+        android:paddingEnd="15dp"
+        android:paddingStart="15dp"
+        android:paddingTop="5dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_marginStart="10dp"
+                android:background="@color/color13" />
+            <TextView
+                android:id="@+id/tv_first"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="3dp"
+                android:ellipsize="marquee"
+                android:singleLine="true"
+                android:text="1st(dB) Max=? Min=? Ave=?"
+                android:textColor="@color/color2"
+                android:textSize="12sp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/color_second"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_marginStart="20dp"
+                android:background="@color/color14" />
+            <TextView
+                android:id="@+id/tv_second"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="3dp"
+                android:ellipsize="marquee"
+                android:singleLine="true"
+                android:text="2st(dB) Max=? Min=? Ave=?"
+                android:textColor="@color/color2"
+                android:textSize="12sp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/color_third"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_marginStart="30dp"
+                android:background="@color/color25" />
+            <TextView
+                android:id="@+id/tv_third"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="3dp"
+                android:ellipsize="marquee"
+                android:singleLine="true"
+                android:text="3st(dB) Max=? Min=? Ave=?"
+                android:textColor="@color/color2"
+                android:textSize="12sp" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/customCurveChart"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp">
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
